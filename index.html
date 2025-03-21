@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gossip Girl - XOXO</title>
+    <style>
+
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #fff;
+    background-image: url('https://i.ytimg.com/vi/gk6QuPkPy9Q/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mobile Fix */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: auto 100%;
+    }
+}
+
+
+
+
+
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent background for the header */
+        }
+
+        header img {
+            max-width: 300px; /* Adjust the size of the logo */
+            height: auto;
+        }
+
+        .main-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: rgba(38, 38, 38, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            ackdrop-filter: blur(15px);
+  transition: 0.3s ease-in-out;
+        }
+
+        .back-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: rgba(38, 38, 38, 0.4); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            ackdrop-filter: blur(15px);
+  transition: 0.3s ease-in-out;
+        }
+
+        .bottom-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: rgba(38, 38, 38, 0.0); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            ackdrop-filter: blur(15px);
+  transition: 0.3s ease-in-out;
+        }
+
+        .post-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #d4af37; /* Gold color */
+        }
+
+        .post-author {
+            font-size: 1em;
+            font-style: italic;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .post-content {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 600px; /* Adjust image size */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: #000;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    color: #d4af37;
+    font-size: 1.2em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+        }
+
+    main {
+    flex: 1; /* This makes sure the main content fills the space but doesn't force an unnecessary gap */
+    padding-bottom: 80px; /* Adds some space above the footer */
+}
+
+
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+   
+background-image: url('https://i.ytimg.com/vi/gk6QuPkPy9Q/maxresdefault.jpg'); /* Your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+    
+    .post-title {
+        font-size: 1.4em; /* Smaller title */
+    }
+
+    .post-author {
+        font-size: 0.9em; /* Adjusted author text */
+    }
+
+    .post-content {
+        font-size: 1em; /* Smaller body text for better fit */
+    }
+
+    .main-container {
+        width: 90%; /* Make the container a bit wider on mobile */
+        padding: 15px; /* Reduce padding for better spacing */
+    }
+}
+
+      
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Sound Once</title>
+</head>
+<body>
+
+<audio id="myAudio" src="https://drive.google.com/file/d/10N1FNlls2SJDLGbe0Zk5W8Ev4ksOcMKo/view?usp=drivesdk"></audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("myAudio");
+
+        if (!sessionStorage.getItem("audioPlayed")) {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+            sessionStorage.setItem("audioPlayed", "true");
+        }
+    });
+</script>
+
+</body>
+       
+<link rel="manifest" href="manifest.json">
+
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header with Gossip Girl logo -->
+    <header>
+        <img src="https://411girlgossip.yolasite.com/resources/logo.png" alt="Gossip Girl Logo"> <!-- Replace with your logo URL -->
+    </header>
+
+<main>
+ 
+    
+   <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 3, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Hello, Mills. Welcome to the new Gossip Girl—your ultimate source for scandal in the Upper East Side.
+                Stay tuned… because the juiciest gossip is just getting started. You know you love me. XOXO, Gossip Girl.
+                
+            </p>
+            <p>
+              
+             </div>   
+               </div>  
+
+
+   
+   
+       <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Our Mail
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 5, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Here's the way to spill the gossip.
+            </p>
+            <p>
+               Spill the gossip at "thegossipgirl2024x@gmail.com" and do not worry we are always here.
+
+            </p>
+        </div>
+
+        </div> 
+      
+      
+       <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 19 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          From First Time to Full-On Beef: The Siyana 9B Drama
+            </p>
+            <p>
+                 Spotted: Siyana 9B, who had her first time back in 7th/8th grade,
+               now finds herself in the middle of a full-on beef with her entire class. Talk about drama!
+        </div>
+    </div>
+      
+      
+      
+       <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 19 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          Bathroom Blunder: The Smelly Truth About G.M 08
+            </p>
+            <p>
+                 Spotted: G.M 08 went to the bathroom and, let’s just say, it smelled not so fresh.
+               Guess she had an accident after finding out that people think she’s “clingy and toxic.” because her boyfriend is saying that.Ouch.
+        </div>
+    </div>
+      
+      
+      
+      <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 19 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          Innocence or illusion?
+            </p>
+            <p>
+      Spotted: Veneta 08 pretending to be all innocent, but let’s not forget, she lost her innocence back in 7th grade.
+      Oh, and did we mention she was a little hooked on something back then too? The past always catches up.
+            
+        </div>
+    </div>
+      
+      
+      <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 19 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          Love, Lies, and Heartbreak: A Story of Rejection
+            </p>
+            <p>
+      Spotted: Ruslana 08, totally head over heels for Petko 08, but turns out, he’s still hung up on Eleonora from his class.
+      Oh, and did we mention Eleonora is the ex of his best friend? Sharing is caring, right? But this wasn’t the first time for Petko.
+      Love’s a tricky game. Petko blocked Ruslana, and when she tried calling him, he shut her down with a cold “I don’t want you.” Ouch, Ruslana—replaced by Elito. How sad.
+
+            
+        </div>
+    </div>
+      
+      
+      
+      <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 17 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          Michelle’s Love Triangle: Stuck in the Past, Watched by All
+            </p>
+            <p>
+      Spotted: Michelle ’07 had her sights set on Madlen ’08 PG, but things didn’t go as planned – turns out Madlen is still stuck on her ex. Yikes.
+      Meanwhile, Michelle hasn’t moved on from her ex either… At first glance, Michelle doesn’t seem to show any interest… The only question is – before which girl or boy? Oh, and someone’s been stalking her and definitely has a thing for her.
+
+            
+        </div>
+    </div>
+
+
+<!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 17 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          The Divalicious Drama Queens Are Back
+            </p>
+            <p>
+      Spotted: The infamous four—Presiana, Iveta, Michelle, and Teodora—are at it again.
+      We all know these ladies don’t just love drama; they create it. Scandal is their middle name,
+      and they never miss a chance to stir things up. Whether it’s chasing their own interests or just causing chaos for fun,
+      one thing’s for sure—today won’t be any different. The teachers call them divas, but we all know they wear that title like a crown.
+      Stay tuned, because where they go, trouble always follows.
+
+            
+        </div>
+    </div>
+
+
+
+    
+
+<!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 4 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          Gabriela ‘09: Too Friendly or Too Shady?
+            </p>
+            <p>
+      Spotted: Gabriela ‘09, deep in conversation with Preslav Bochukov ‘08—but that’s not stopping her from keeping a little too close to the boyfriends of her mutuals.
+                Coincidence? I think not. Playing both sides is a dangerous game, and sooner or later, someone’s bound to notice. Stay tuned—this one’s getting interesting. 
+
+            
+        </div>
+    </div>
+
+    
+
+    <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 4 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+          Betrayal, Secrets, and Scandal: The Truth Behind the Love Triangle
+            </p>
+            <p>
+      Spotted: Finito 010 once Mitko 08’s lover, now with his biggest enemy, Valyo Vikinga. 
+      Why? Maybe because he was the one who helped her home while she was still with Mitko. 
+      Ouch.And Renito 09? The so-called bestie—now dating Finito’s ex. 
+      Loyalty? Never heard of her. They were enemies, talking behind each other’s backs, and now? 
+      Same old tricks, just new alliances.
+      Today, Mitko’s girl and his ex—aka Renito & Finito—caught gossiping again. About Gabriela 09? Wouldn’t be the first time. But is Mitko okay with this? Something tells me the drama’s just getting started.
+
+            
+        </div>
+    </div>
+      
+      
+      
+<!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 4 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+            From Heartbreak to Power Play: Finito 010’s Ultimate Revenge
+            </p>
+            <p>
+      Spotted: Finito 010 swapping heartbreak for payback, linking up with her ex’s biggest enemy — Valio Vikinga 06. 
+      Love or revenge? 
+      Only time will tell.
+
+            
+        </div>
+    </div>
+   
+       <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 3 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+            Clash of the Titans: Elito 010 vs. Raya Dimova 08
+            </p>
+            <p>
+         Spotted: Elito 010 itching for a showdown with Raya Dimova 08. 
+         Word is, tensions have escalated, and Elito’s ready to throw down. 
+         What’s fueling this feud? A love triangle gone wrong? 
+         A betrayal that cuts deep? Or just a classic case of too much drama and not enough sense?
+
+         Stay tuned, darlings—this catfight is about to get very interesting.
+
+         XOXO,
+         Gossip Girl
+            
+        </div>
+    </div>
+
+
+
+    <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 1 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+            You think your family loves you, think again
+            </p>
+            <p>
+           Spotted: Maxim, caught in a family feud fit for a soap opera.
+           M thinks his mother is watching his every move—literally. Cameras, suspicion, paranoia. Can’t even have a little me time without feeling like Big Brother (or should we say, Big Mother?) is watching. And his dad? Well, let’s just say fatherly love isn’t exactly in the air.
+           Is it all in M’s head, or is there something darker at play? Either way, between the surveillance state at home and an enemy in disguise (looking at you, Q), poor Maxim has nowhere to run.
+           Hang in there, M. And maybe check for hidden cameras.
+            
+        </div>
+    </div>
+
+
+
+    <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 1 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+            Max 09 messing up, again
+            </p>
+            <p>
+           Spotted: Our dear Maxim, mistaking a wolf in sheep’s clothing for a kindred spirit. How tragic. How naïve.
+           Word on the street? M thought he was gaining a new bestie, a confidant, a fellow rainbow warrior. But oh, darling, the only thing Q is waving is a red flag. Because the truth? Q isn’t here for friendship—he’s here for vengeance. And Maxim? He’s the target.
+           Was it a misunderstanding? A cruel twist of fate? Or did Q want Maxim to feel safe before he struck? Either way, the game is on, and poor Maxim is playing checkers while Q is orchestrating chess.
+           Keep your friends close, M. And your enemies? Even closer.
+
+            
+        </div>
+    </div>
+   
+
+<!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | March 1 , 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+            Gay Drama Unfolds: Exes, Crushes, and a Suspicious Story
+            </p>
+            <p>
+            Spotted: Max 09 crushing on Martin 08—but only for two days. 
+            Before that? He was with Ema 09’s boyfriend (or ex)… but before Eva. 
+            And the plot thickens—back in 8th grade, Eva 09 had a thing for Plamena. 
+            Now, Max and Eva just dropped a story that’s… well, not so normal.
+
+            What’s really going on here? Stay tuned, darlings—the gay drama is just getting started.
+            
+           
+            
+        </div>
+    </div>
+   
+   
+      <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 28, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+            Emily’s Love Loop: Back to Martin After Pavel’s Rejection
+            </p>
+            <p>
+            Spotted: Emily Georgieva 07 ditching Martin—was it for her first love, Pavel Ivanov 06? 
+            First he wans het,but then she wants him.Texting eachother behind their partners backs,ew!
+            Seems like it… until Pavel set his sights AGAIN on Monika, who definitely doesn’t want him back. 
+            And just like that, Emily ran back to Martin,maybe?
+
+            Stay tuned, darlings—this love triangle isn’t over yet.
+        
+            
+           
+            
+       </div>
+    </div>
+      <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 28, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+               Elito 010’s Wild Ride: Love, Drama & a Scandalous Video
+            </p>
+            <p>
+             Spotted: Elito 010 in a very revealing video—three guys, one car, and zero shame.
+            But the real drama? First, she crushed on Martin 08, then moved on to Panayot 08—only for things to crash and burn over her questionable hangouts with gypsies.
+            And now? She’s officially done with Panayot.
+             Messy doesn’t even begin to cover it.
+            
+      
+                
+        </div>
+    </div>
+            
+
+    </main>
+            
+        
+    <!-- Footer -->
+    <footer>
+        XOXO, Gossip Girl
+    </footer>
+
+</body>
+</html>
